@@ -104,6 +104,17 @@ class ListViewController: UITableViewController {
     
     return cell
   }
+  
+  // MARK: - Navigation
+  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    if segue.identifier == "showDetailSegue" {
+      let detailVC = segue.destination as! DetailViewController
+      let indexPath = tableView.indexPathForSelectedRow!
+      let exercise = exercises[indexPath.row]
+      
+      detailVC.workoutName = exercise.name
+    }
+  }
 }
 
 extension ListViewController: UISearchResultsUpdating {

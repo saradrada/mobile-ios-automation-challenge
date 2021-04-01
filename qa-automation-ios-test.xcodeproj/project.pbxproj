@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		237C7330261221A200E38ECB /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237C732F261221A200E38ECB /* DetailViewController.swift */; };
 		C34130B924091DBE001D01D3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C34130B824091DBE001D01D3 /* AppDelegate.swift */; };
 		C34130BB24091DBE001D01D3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C34130BA24091DBE001D01D3 /* SceneDelegate.swift */; };
 		C34130BD24091DBE001D01D3 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C34130BC24091DBE001D01D3 /* LoginViewController.swift */; };
@@ -37,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		237C732F261221A200E38ECB /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		C34130B524091DBE001D01D3 /* qa-automation-ios-test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "qa-automation-ios-test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C34130B824091DBE001D01D3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C34130BA24091DBE001D01D3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -137,6 +139,7 @@
 			children = (
 				C34130BC24091DBE001D01D3 /* LoginViewController.swift */,
 				C34130EB240923C1001D01D3 /* ListViewController.swift */,
+				237C732F261221A200E38ECB /* DetailViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -292,6 +295,7 @@
 				C34130BD24091DBE001D01D3 /* LoginViewController.swift in Sources */,
 				C34130B924091DBE001D01D3 /* AppDelegate.swift in Sources */,
 				C34130EC240923C1001D01D3 /* ListViewController.swift in Sources */,
+				237C7330261221A200E38ECB /* DetailViewController.swift in Sources */,
 				C34130EE24092552001D01D3 /* Excercise.swift in Sources */,
 				C34130BB24091DBE001D01D3 /* SceneDelegate.swift in Sources */,
 			);
