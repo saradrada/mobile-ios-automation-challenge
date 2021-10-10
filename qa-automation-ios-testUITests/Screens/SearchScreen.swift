@@ -22,7 +22,7 @@ extension SearchScreen {
     
     func selectExercise(id : String, name : String){
         let exercise = getExercise(meta: "\(id): \(name)")
-        XCTAssertTrue(exercise.waitForExistence(timeout: 1))
+        XCTAssertTrue(exercise.waitForExistence(timeout: 5))
         exercise.tap()
     }
     

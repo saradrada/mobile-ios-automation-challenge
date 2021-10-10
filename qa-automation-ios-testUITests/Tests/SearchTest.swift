@@ -8,7 +8,7 @@
 
 import XCTest
 
-class SearchTest: AppStarter, SearchScreen, LoginScreen, ExerciseDetailsScreen {
+class SearchTest: AppStarter, SearchScreen, LoginScreen, ExerciseScreen {
     
     func test_searchExistingExercise(){
         login()
@@ -16,10 +16,10 @@ class SearchTest: AppStarter, SearchScreen, LoginScreen, ExerciseDetailsScreen {
         searcExercise(id: "10")
         cleartText()
         searchAndSelectExercise(id: "124", name: "Butterfly Reverse")
-        isExerciseDetailsScreenDisplayed()
+        isExerciseScreenDisplayed()
     }
     
-    func test_searchNonExistingExercise(){
+    func test_searchNonExistentExercise(){
         login()
         isSearchBarDisplayed()
         searcExercise(id: "00")
