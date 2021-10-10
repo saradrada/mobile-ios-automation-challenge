@@ -12,6 +12,7 @@ enum LoginData : String {
  
     case validUsername = "automation@gymondo.de"
     case validPassword = "automation"
+    case invalidUsername = "ivalid@username.com"
     case invalidPassword = "invalidPassword"
     
 }

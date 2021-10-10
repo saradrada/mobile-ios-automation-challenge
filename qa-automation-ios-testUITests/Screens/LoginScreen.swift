@@ -8,15 +8,19 @@
 
 import XCTest
 
-protocol LoginScreen {    
-    var usernameTextField : XCUIElement { get }
-    var passwordTextField : XCUIElement { get }
-    var loginButton : XCUIElement { get }
-}
+protocol LoginScreen { }
 
 extension LoginScreen {
     
-    func isLoginDisplayed(){
+    func login(_ username: String = LoginData.validUsername.rawValue,
+               _ password: String = LoginData.validPassword.rawValue){
+        isLoginScreenDisplayed()
+        typeUsername(username)
+        typePassword(password)
+        loginButton.tap()
+    }
+    
+    func isLoginScreenDisplayed(){
         XCTAssertTrue(usernameTextField.waitForExistence(timeout: 1))
         XCTAssertTrue(passwordTextField.waitForExistence(timeout: 1))
         XCTAssertTrue(loginButton.waitForExistence(timeout: 1))
