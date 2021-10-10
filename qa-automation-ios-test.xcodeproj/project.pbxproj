@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		237C7330261221A200E38ECB /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237C732F261221A200E38ECB /* DetailViewController.swift */; };
+		6C5A73E42712016C00DA9F83 /* AppStarter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C5A73E32712016C00DA9F83 /* AppStarter.swift */; };
+		6C5A73E6271204E200DA9F83 /* LoginScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C5A73E5271204E200DA9F83 /* LoginScreen.swift */; };
+		6C5A73E927120A3D00DA9F83 /* LoginData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C5A73E827120A3D00DA9F83 /* LoginData.swift */; };
+		6C5A73EB271277D300DA9F83 /* SearchScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C5A73EA271277D300DA9F83 /* SearchScreen.swift */; };
 		C34130B924091DBE001D01D3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C34130B824091DBE001D01D3 /* AppDelegate.swift */; };
 		C34130BB24091DBE001D01D3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C34130BA24091DBE001D01D3 /* SceneDelegate.swift */; };
 		C34130BD24091DBE001D01D3 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C34130BC24091DBE001D01D3 /* LoginViewController.swift */; };
@@ -39,6 +43,10 @@
 
 /* Begin PBXFileReference section */
 		237C732F261221A200E38ECB /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		6C5A73E32712016C00DA9F83 /* AppStarter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStarter.swift; sourceTree = "<group>"; };
+		6C5A73E5271204E200DA9F83 /* LoginScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreen.swift; sourceTree = "<group>"; };
+		6C5A73E827120A3D00DA9F83 /* LoginData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginData.swift; sourceTree = "<group>"; };
+		6C5A73EA271277D300DA9F83 /* SearchScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchScreen.swift; sourceTree = "<group>"; };
 		C34130B524091DBE001D01D3 /* qa-automation-ios-test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "qa-automation-ios-test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C34130B824091DBE001D01D3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C34130BA24091DBE001D01D3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -82,6 +90,38 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6C5A73E02711FAD900DA9F83 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		6C5A73E12711FAF100DA9F83 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				6C5A73E5271204E200DA9F83 /* LoginScreen.swift */,
+				6C5A73EA271277D300DA9F83 /* SearchScreen.swift */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		6C5A73E22711FB9A00DA9F83 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				6C5A73E32712016C00DA9F83 /* AppStarter.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		6C5A73E7271208B300DA9F83 /* TestData */ = {
+			isa = PBXGroup;
+			children = (
+				6C5A73E827120A3D00DA9F83 /* LoginData.swift */,
+			);
+			path = TestData;
+			sourceTree = "<group>";
+		};
 		C34130AC24091DBE001D01D3 = {
 			isa = PBXGroup;
 			children = (
@@ -128,6 +168,10 @@
 		C34130D924091DC0001D01D3 /* qa-automation-ios-testUITests */ = {
 			isa = PBXGroup;
 			children = (
+				6C5A73E7271208B300DA9F83 /* TestData */,
+				6C5A73E22711FB9A00DA9F83 /* Helpers */,
+				6C5A73E12711FAF100DA9F83 /* Screens */,
+				6C5A73E02711FAD900DA9F83 /* Tests */,
 				C34130DA24091DC0001D01D3 /* qa_automation_ios_testUITests.swift */,
 				C34130DC24091DC0001D01D3 /* Info.plist */,
 			);
@@ -314,6 +358,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				C34130DB24091DC0001D01D3 /* qa_automation_ios_testUITests.swift in Sources */,
+				6C5A73EB271277D300DA9F83 /* SearchScreen.swift in Sources */,
+				6C5A73E927120A3D00DA9F83 /* LoginData.swift in Sources */,
+				6C5A73E42712016C00DA9F83 /* AppStarter.swift in Sources */,
+				6C5A73E6271204E200DA9F83 /* LoginScreen.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
