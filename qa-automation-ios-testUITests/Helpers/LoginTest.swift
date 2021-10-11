@@ -10,28 +10,53 @@ import XCTest
 
 class LoginTest: AppStarter, LoginScreen, SearchScreen {
 
+    private let searchExercisesText = "Search exercises"
+    
     func test_loginWithValidCredentials() {
-        isLoginScreenDisplayed()
+        XCTAssertTrue(searchBar.waitForExistence(timeout: 10))
+        XCTAssertEqual(searchBar.label, searchExercisesText)
+        XCTAssertEqual(searchBar.placeholderValue, searchExercisesText)
+        
         typeUsername()
         typePassword()
         tapOnLogin()
-        isSearchBarDisplayed()
+        
+        XCTAssertTrue(searchBar.waitForExistence(timeout: 10))
+        XCTAssertEqual(searchBar.label, searchExercisesText)
+        XCTAssertEqual(searchBar.placeholderValue, searchExercisesText)
     }
     
     func test_loginWithInvalidCredentials() {
-        isLoginScreenDisplayed()
+        XCTAssertTrue(searchBar.waitForExistence(timeout: 10))
+        XCTAssertEqual(searchBar.label, searchExercisesText)
+        XCTAssertEqual(searchBar.placeholderValue, searchExercisesText)
+        
         typeUsername(LoginData.validUsername.rawValue)
         typePassword(LoginData.invalidPassword.rawValue)
         tapOnLogin()
-        isInvalidCredentialsAlertDisplayed()
+        
+        XCTAssertTrue(searchBar.waitForExistence(timeout: 10))
+        XCTAssertEqual(searchBar.label, searchExercisesText)
+        XCTAssertEqual(searchBar.placeholderValue, searchExercisesText)
+        
         tapOnDismiss()
     }
     
     func test_loginWithEmptyCredentials() {
-        isLoginScreenDisplayed()
+        XCTAssertTrue(searchBar.waitForExistence(timeout: 10))
+        XCTAssertEqual(searchBar.label, searchExercisesText)
+        XCTAssertEqual(searchBar.placeholderValue, searchExercisesText)
+        
         tapOnLogin()
-        isInvalidCredentialsAlertDisplayed()
+        
+        XCTAssertTrue(searchBar.waitForExistence(timeout: 10))
+        XCTAssertEqual(searchBar.label, searchExercisesText)
+        XCTAssertEqual(searchBar.placeholderValue, searchExercisesText)
+        
         tapOnDismiss()
-        isLoginScreenDisplayed()
+        
+        XCTAssertTrue(searchBar.waitForExistence(timeout: 10))
+        XCTAssertEqual(searchBar.label, searchExercisesText)
+        XCTAssertEqual(searchBar.placeholderValue, searchExercisesText)
     }
 }

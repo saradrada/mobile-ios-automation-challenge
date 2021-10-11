@@ -13,12 +13,6 @@ protocol ExerciseDetailsScreen { }
 
 extension ExerciseDetailsScreen {
     
-    func isExerciseDetailsScreenDisplayed(){
-        XCTAssertTrue(backButton.waitForExistence(timeout: 1))
-        XCTAssertTrue(exerciseTitle.waitForExistence(timeout: 1))
-        XCTAssertTrue(exerciseImage.waitForExistence(timeout: 1))
-    }
-    
     var backButton : XCUIElement {
         return XCUIApplication().buttons["Back"]
     }
