@@ -52,31 +52,31 @@ extension LoginScreen {
     }
     
     var usernameTextField: XCUIElement {
-        return XCUIApplication().textFields["usernameTextField"]
+        return XCUIApplication().textFields[Accessibility.Login.usernameTextField]
     }
     
     var passwordTextField: XCUIElement {
-        return XCUIApplication().textFields["passwordTextField"]
+        return XCUIApplication().textFields[Accessibility.Login.passwordTextField]
     }
     
     var loginButton: XCUIElement {
-        return XCUIApplication().buttons["loginButton"]
+        return XCUIApplication().buttons[Accessibility.Login.loginButton]
     }
     
     var dismissAlert: XCUIElement {
-        return XCUIApplication().alerts["Try again"]
+        return XCUIApplication().alerts[Accessibility.Login.tryAgain]
     }
     
     var dismissButton: XCUIElement {
-        return XCUIApplication().buttons["Dismiss"]
+        return XCUIApplication().buttons[Accessibility.Login.disminssButton]
     }
     
     var invalidCredentialsAlertTitle: XCUIElement {
-        return XCUIApplication().staticTexts["Try again"]
+        return XCUIApplication().staticTexts[Accessibility.Login.tryAgain]
     }
     
     var invalidCredentialsAlertDescription: XCUIElement {
-        return XCUIApplication().staticTexts["Wrong credentials"]
+        return XCUIApplication().staticTexts[Accessibility.Login.wrongCredentialsText]
     }
     
 }
