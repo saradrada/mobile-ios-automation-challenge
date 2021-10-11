@@ -19,6 +19,7 @@
 		6C5A73F727134AAE00DA9F83 /* Excercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = C34130ED24092552001D01D3 /* Excercise.swift */; };
 		6C5A73F9271364EF00DA9F83 /* ExerciseDetailsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C5A73F8271364EF00DA9F83 /* ExerciseDetailsScreen.swift */; };
 		6C5A74012713B48300DA9F83 /* Accessibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C5A74002713B48300DA9F83 /* Accessibility.swift */; };
+		6C5A74032713C55400DA9F83 /* LoginTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C5A74022713C55400DA9F83 /* LoginTest.swift */; };
 		C34130B924091DBE001D01D3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C34130B824091DBE001D01D3 /* AppDelegate.swift */; };
 		C34130BB24091DBE001D01D3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C34130BA24091DBE001D01D3 /* SceneDelegate.swift */; };
 		C34130BD24091DBE001D01D3 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C34130BC24091DBE001D01D3 /* LoginViewController.swift */; };
@@ -58,6 +59,7 @@
 		6C5A73F02712B72500DA9F83 /* SearchData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchData.swift; sourceTree = "<group>"; };
 		6C5A73F8271364EF00DA9F83 /* ExerciseDetailsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseDetailsScreen.swift; sourceTree = "<group>"; };
 		6C5A74002713B48300DA9F83 /* Accessibility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Accessibility.swift; sourceTree = "<group>"; };
+		6C5A74022713C55400DA9F83 /* LoginTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LoginTest.swift; path = "qa-automation-ios-testUITests/Helpers/LoginTest.swift"; sourceTree = SOURCE_ROOT; };
 		C34130B524091DBE001D01D3 /* qa-automation-ios-test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "qa-automation-ios-test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C34130B824091DBE001D01D3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C34130BA24091DBE001D01D3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -103,8 +105,8 @@
 		6C5A73E02711FAD900DA9F83 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				6C5A73EC2712B16100DA9F83 /* LoginTest.swift */,
 				6C5A73EE2712B21300DA9F83 /* SearchTest.swift */,
+				6C5A74022713C55400DA9F83 /* LoginTest.swift */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -372,10 +374,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6C5A74032713C55400DA9F83 /* LoginTest.swift in Sources */,
 				6C5A73EB271277D300DA9F83 /* SearchScreen.swift in Sources */,
 				6C5A73E927120A3D00DA9F83 /* LoginData.swift in Sources */,
 				6C5A73F12712B72500DA9F83 /* SearchData.swift in Sources */,
-				6C5A73ED2712B16100DA9F83 /* LoginTest.swift in Sources */,
 				6C5A73E42712016C00DA9F83 /* AppStarter.swift in Sources */,
 				6C5A73F727134AAE00DA9F83 /* Excercise.swift in Sources */,
 				6C5A74012713B48300DA9F83 /* Accessibility.swift in Sources */,
