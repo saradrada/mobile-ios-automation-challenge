@@ -29,10 +29,10 @@ class SearchTest: AppStarter, SearchScreen, LoginScreen, ExerciseDetailsScreen {
         cleartText()
         searcExercise(exercise.id)
         
-        selectExercise(exercise)
-        
         XCTAssertTrue(cancelButton.waitUntilExists())
         XCTAssertTrue(clearTextButton.waitUntilExists())
+        
+        selectExercise(exercise)
         
         XCTAssertTrue(backButton.waitUntilExists())
         XCTAssertTrue(exerciseTitle.waitUntilExists())
@@ -40,7 +40,7 @@ class SearchTest: AppStarter, SearchScreen, LoginScreen, ExerciseDetailsScreen {
     }
     
     func test_searchNonExistingExercise(){
-        let nonExistentExercise = Excercise(id: 1, name: "Sleep")
+        let nonExistentExercise = Excercise(id: 12345, name: "Sleep")
         
         login()
         searcExercise(nonExistentExercise.id)
