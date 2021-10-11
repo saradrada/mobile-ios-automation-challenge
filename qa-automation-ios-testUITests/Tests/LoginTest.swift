@@ -10,12 +10,12 @@ import XCTest
 
 class LoginTest: AppStarter, LoginScreen, SearchScreen {
 
-    private let searchExercisesText = "Search exercises"
+    private var searchExercisesText = "Search exercises"
     
     func test_loginWithValidCredentials() {
-        XCTAssertTrue(searchBar.waitForExistence(timeout: 10))
-        XCTAssertEqual(searchBar.label, searchExercisesText)
-        XCTAssertEqual(searchBar.placeholderValue, searchExercisesText)
+        XCTAssertTrue(usernameTextField.waitForExistence(timeout: 10))
+        XCTAssertTrue(passwordTextField.waitForExistence(timeout: 1))
+        XCTAssertTrue(loginButton.waitForExistence(timeout: 1))
         
         typeUsername()
         typePassword()
@@ -27,36 +27,40 @@ class LoginTest: AppStarter, LoginScreen, SearchScreen {
     }
     
     func test_loginWithInvalidCredentials() {
-        XCTAssertTrue(searchBar.waitForExistence(timeout: 10))
-        XCTAssertEqual(searchBar.label, searchExercisesText)
-        XCTAssertEqual(searchBar.placeholderValue, searchExercisesText)
+        XCTAssertTrue(usernameTextField.waitForExistence(timeout: 10))
+        XCTAssertTrue(passwordTextField.waitForExistence(timeout: 1))
+        XCTAssertTrue(loginButton.waitForExistence(timeout: 1))
         
         typeUsername(LoginData.validUsername.rawValue)
         typePassword(LoginData.invalidPassword.rawValue)
         tapOnLogin()
         
-        XCTAssertTrue(searchBar.waitForExistence(timeout: 10))
-        XCTAssertEqual(searchBar.label, searchExercisesText)
-        XCTAssertEqual(searchBar.placeholderValue, searchExercisesText)
+        XCTAssertTrue(usernameTextField.waitForExistence(timeout: 10))
+        XCTAssertTrue(passwordTextField.waitForExistence(timeout: 1))
+        XCTAssertTrue(loginButton.waitForExistence(timeout: 1))
         
         tapOnDismiss()
+        
+        XCTAssertTrue(usernameTextField.waitForExistence(timeout: 10))
+        XCTAssertTrue(passwordTextField.waitForExistence(timeout: 1))
+        XCTAssertTrue(loginButton.waitForExistence(timeout: 1))
     }
     
     func test_loginWithEmptyCredentials() {
-        XCTAssertTrue(searchBar.waitForExistence(timeout: 10))
-        XCTAssertEqual(searchBar.label, searchExercisesText)
-        XCTAssertEqual(searchBar.placeholderValue, searchExercisesText)
+        XCTAssertTrue(usernameTextField.waitForExistence(timeout: 10))
+        XCTAssertTrue(passwordTextField.waitForExistence(timeout: 1))
+        XCTAssertTrue(loginButton.waitForExistence(timeout: 1))
         
         tapOnLogin()
         
-        XCTAssertTrue(searchBar.waitForExistence(timeout: 10))
-        XCTAssertEqual(searchBar.label, searchExercisesText)
-        XCTAssertEqual(searchBar.placeholderValue, searchExercisesText)
+        XCTAssertTrue(usernameTextField.waitForExistence(timeout: 10))
+        XCTAssertTrue(passwordTextField.waitForExistence(timeout: 1))
+        XCTAssertTrue(loginButton.waitForExistence(timeout: 1))
         
         tapOnDismiss()
         
-        XCTAssertTrue(searchBar.waitForExistence(timeout: 10))
-        XCTAssertEqual(searchBar.label, searchExercisesText)
-        XCTAssertEqual(searchBar.placeholderValue, searchExercisesText)
+        XCTAssertTrue(usernameTextField.waitForExistence(timeout: 10))
+        XCTAssertTrue(passwordTextField.waitForExistence(timeout: 1))
+        XCTAssertTrue(loginButton.waitForExistence(timeout: 1))
     }
 }
