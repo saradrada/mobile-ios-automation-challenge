@@ -15,19 +15,23 @@ class qa_automation_ios_testUITests: AppStarter, LoginScreen, SearchScreen {
         typeUsername()
         typePassword()
         tapOnLogin()
-        isSearchBarDisplayed()
-       
+        isSearchBarDisplayed()       
     }
     
-    func test_loginWithInvalidCredentials(){
+    func test_loginWithInvalidCredentials() {
         isLoginDisplayed()
-        tapOnLogin()
-        isInvalidCredentialsAlertDisplayed()
-        tapOnDismiss()
-        
         typeUsername(LoginData.validUsername.rawValue)
         typePassword(LoginData.invalidPassword.rawValue)
         tapOnLogin()
         isInvalidCredentialsAlertDisplayed()
+        tapOnDismiss()
+    }
+    
+    func test_loginWithEmptyCredentials() {
+        isLoginDisplayed()
+        tapOnLogin()
+        isInvalidCredentialsAlertDisplayed()
+        tapOnDismiss()
+        isLoginDisplayed()
     }
 }

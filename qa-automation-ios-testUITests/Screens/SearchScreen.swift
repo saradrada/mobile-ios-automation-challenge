@@ -19,6 +19,6 @@ extension SearchScreen {
     }
     
     var searchBar : XCUIElement {
-        return XCUIApplication().searchFields["Search exercises"]
+        return XCUIApplication().searchFields[Accessibility.Search.searchExercisesText]
     }
 }
