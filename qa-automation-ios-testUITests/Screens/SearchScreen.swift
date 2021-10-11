@@ -12,40 +12,21 @@ protocol SearchScreen { }
 
 extension SearchScreen {
     
-    func searcExercise(id: String) {
+    func searcExercise(_ id: Int) {
         searchBar.tap()
         searchBar.typeText("\(id)")
-        
-        XCTAssertTrue(cancelButton.waitForExistence(timeout: 1))
-        XCTAssertTrue(clearTextButton.waitForExistence(timeout: 1))
     }
     
-    func selectExercise(id : String, name : String){
-        let exercise = getExercise(meta: "\(id): \(name)")
-        XCTAssertTrue(exercise.waitForExistence(timeout: 5))
-        exercise.tap()
-    }
-    
-    func searchAndSelectExercise(id : String, name : String) {
-        searcExercise(id: id)
-        selectExercise(id: id, name: name)
+    func selectExercise(_ exercise : Excercise){
+        let foundExercise = getExercise(meta: "\(exercise.id): \(exercise.name)")
+        foundExercise.tap()
     }
     
     func cleartText(){
         clearTextButton.tap()
     }
     
-    func isSearchBarDisplayed() {
-        XCTAssertTrue(searchBar.waitForExistence(timeout: 10))
-        XCTAssertEqual(searchBar.label, "Search exercises")
-        XCTAssertEqual(searchBar.placeholderValue, "Search exercises")
-    }
-    
-    func isEmptyListDisplayed(){
-        XCTAssertTrue(emptyList.waitForExistence(timeout: 1))
-    }
-    
-    private func getExercise(meta : String) -> XCUIElement {
+    func getExercise(meta : String) -> XCUIElement {
         return XCUIApplication().staticTexts[meta]
     }
     
@@ -54,15 +35,15 @@ extension SearchScreen {
     }
     
     var cancelButton : XCUIElement {
-        return XCUIApplication().buttons["Cancel"]
+        return XCUIApplication().buttons[Accessibility.Search.cancelButton]
     }
     
     var clearTextButton : XCUIElement {
-        return XCUIApplication().buttons["Clear text"]
+        return XCUIApplication().buttons[Accessibility.Search.clearTextButton]
     }
     
     var emptyList : XCUIElement {
-        return XCUIApplication().tables["Empty list"]
+        return XCUIApplication().tables[Accessibility.Search.emptyList]
     }
     
 }

@@ -7,3 +7,19 @@
 //
 
 
+protocol ExerciseDetailsScreen { }
+
+extension ExerciseDetailsScreen {
+    
+    var backButton : XCUIElement {
+        return XCUIApplication().buttons["Back"]
+    }
+    
+    var exerciseTitle : XCUIElement {
+        return XCUIApplication().staticTexts["label_workout-title"]
+    }
+    
+    var exerciseImage : XCUIElement {
+        return XCUIApplication().images["image_workout-equipment"]
+    }
+}

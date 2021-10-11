@@ -1,5 +1,5 @@
 //
-//  SearchData.swift
+//  CustomAssertion.swift
 //  qa-automation-ios-testUITests
 //
 //  Created by Sara Ortiz Drada on 10/10/21.

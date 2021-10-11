@@ -10,19 +10,40 @@ import XCTest
 
 class SearchTest: AppStarter, SearchScreen, LoginScreen, ExerciseScreen {
     
+    private let searchExercisesText = "Search exercises"
+    
     func test_searchExistingExercise(){
+        let exercise = Excercise(id: 307, name: "Bear Walk")
+        
         login()
-        isSearchBarDisplayed()
-        searcExercise(id: "10")
+        
+        XCTAssertTrue(searchBar.waitUntilExists(10))
+        XCTAssertEqual(searchBar.label, searchExercisesText)
+        XCTAssertEqual(searchBar.placeholderValue, searchExercisesText)
+        
+        searcExercise(10)
+        
+        XCTAssertTrue(cancelButton.waitUntilExists())
+        XCTAssertTrue(clearTextButton.waitUntilExists())
+        
         cleartText()
-        searchAndSelectExercise(id: "124", name: "Butterfly Reverse")
-        isExerciseScreenDisplayed()
+        searcExercise(exercise.id)
+        
+        XCTAssertTrue(cancelButton.waitUntilExists())
+        XCTAssertTrue(clearTextButton.waitUntilExists())
+        
+        selectExercise(exercise)
+        
+        XCTAssertTrue(backButton.waitUntilExists())
+        XCTAssertTrue(exerciseTitle.waitUntilExists())
+        XCTAssertTrue(exerciseImage.waitUntilExists())
     }
     
-    func test_searchNonExistentExercise(){
+    func test_searchNonExistingExercise(){
+        let nonExistentExercise = Excercise(id: 12345, name: "Sleep")
+        
         login()
-        isSearchBarDisplayed()
-        searcExercise(id: "00")
-        isEmptyListDisplayed()
+        searcExercise(nonExistentExercise.id)
+        XCTAssertTrue(emptyList.waitUntilExists())
     }
 }

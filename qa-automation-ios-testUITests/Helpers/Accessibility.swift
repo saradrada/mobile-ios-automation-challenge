@@ -20,5 +20,12 @@ enum Accessibility {
     
     enum Search {
         static let searchExercisesText = "Search exercises"
+        static let cancelButton = "Cancel"
+        static let clearTextButton = "Clear text"
+        static let emptyList = "Empty list"
+    }
+    
+    enum Exercise {
+        
     }
 }
