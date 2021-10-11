@@ -11,7 +11,7 @@ import XCTest
 class LoginTest: AppStarter, LoginScreen, SearchScreen {
 
     func test_loginWithValidCredentials() {
-        isLoginDisplayed()
+        isLoginScreenDisplayed()
         typeUsername()
         typePassword()
         tapOnLogin()
@@ -19,7 +19,7 @@ class LoginTest: AppStarter, LoginScreen, SearchScreen {
     }
     
     func test_loginWithInvalidCredentials() {
-        isLoginDisplayed()
+        isLoginScreenDisplayed()
         typeUsername(LoginData.validUsername.rawValue)
         typePassword(LoginData.invalidPassword.rawValue)
         tapOnLogin()
@@ -28,10 +28,10 @@ class LoginTest: AppStarter, LoginScreen, SearchScreen {
     }
     
     func test_loginWithEmptyCredentials() {
-        isLoginDisplayed()
+        isLoginScreenDisplayed()
         tapOnLogin()
         isInvalidCredentialsAlertDisplayed()
         tapOnDismiss()
-        isLoginDisplayed()
+        isLoginScreenDisplayed()
     }
 }
