@@ -11,7 +11,10 @@ import XCTest
 class ExerciseTest: AppStarter, ExerciseScreen, LoginScreen, SearchScreen {
     
     func test_correctExerciseDetails() {
-        let exercise = Excercise(id: 341, name: "Body-Ups")
+        let exercise = ExerciseBuilder()
+            .with(id: 341)
+            .with(name: "Body-Ups")
+            .build()
         
         login()
         selectExercise(exercise)
@@ -23,7 +26,10 @@ class ExerciseTest: AppStarter, ExerciseScreen, LoginScreen, SearchScreen {
     }
     
     func test_goBack(){
-        let exercise = Excercise(id: 307, name: "Bear Walk")
+        let exercise = ExerciseBuilder()
+            .with(id: 307)
+            .with(name: "Bear Walk")
+            .build()
        
         login()
         selectExercise(exercise)
