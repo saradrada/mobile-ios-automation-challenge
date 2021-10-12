@@ -17,17 +17,12 @@ extension SearchScreen {
         searchBar.typeText("\(id)")
     }
     
-    func selectExercise(_ exercise : Excercise){
-        let foundExercise = getExercise(meta: "\(exercise.id): \(exercise.name)")
-        foundExercise.tap()
-    }
-    
     func cleartText(){
         clearTextButton.tap()
     }
     
-    func getExercise(meta : String) -> XCUIElement {
-        return XCUIApplication().staticTexts[meta]
+    func getExercise(_ exercise : Excercise) -> XCUIElement {
+        return XCUIApplication().staticTexts["\(exercise.id): \(exercise.name)"]
     }
     
     var searchBar : XCUIElement {
