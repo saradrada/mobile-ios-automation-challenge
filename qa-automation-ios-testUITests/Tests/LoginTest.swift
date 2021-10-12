@@ -22,8 +22,6 @@ class LoginTest: AppStarter, LoginScreen, SearchScreen {
         tapOnLogin()
         
         XCTAssertTrue(searchBar.waitUntilExists())
-        XCTAssertEqual(searchBar.label, searchExercisesText)
-        XCTAssertEqual(searchBar.placeholderValue, searchExercisesText)
     }
     
     func test_loginWithInvalidCredentials() {
