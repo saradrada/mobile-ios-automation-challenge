@@ -10,7 +10,7 @@ import XCTest
 
 class ExerciseTest: AppStarter, ExerciseScreen, LoginScreen, SearchScreen {
     
-    func test_correctExerciseDetails() {
+    func test_selectExercise(){
         let exercise = ExerciseBuilder()
             .with(id: 341)
             .with(name: "Body-Ups")
