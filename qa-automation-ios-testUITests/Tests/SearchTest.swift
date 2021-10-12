@@ -8,12 +8,14 @@
 
 import XCTest
 
-class SearchTest: AppStarter, SearchScreen, LoginScreen, ExerciseScreen {
-    
-    private let searchExercisesText = "Search exercises"
+class SearchTest: AppStarter, SearchScreen, LoginScreen {
     
     func test_searchExistingExercise(){
-        let exercise = Excercise(id: 307, name: "Bear Walk")
+        let searchExercisesText = "Search exercises"
+        let exercise = ExerciseBuilder()
+            .with(id: 307)
+            .with(name: "Bear Walk")
+            .build()
         
         login()
         
@@ -29,18 +31,14 @@ class SearchTest: AppStarter, SearchScreen, LoginScreen, ExerciseScreen {
         cleartText()
         searcExercise(exercise.id)
         
-        XCTAssertTrue(cancelButton.waitUntilExists())
-        XCTAssertTrue(clearTextButton.waitUntilExists())
-        
-        selectExercise(exercise)
-        
-        XCTAssertTrue(backButton.waitUntilExists())
-        XCTAssertTrue(exerciseName.waitUntilExists())
-        XCTAssertTrue(exerciseImage.waitUntilExists())
+        XCTAssertTrue(getExercise(exercise).waitUntilExists())
     }
     
     func test_searchNonExistingExercise(){
-        let nonExistentExercise = Excercise(id: 12345, name: "Sleep")
+        let nonExistentExercise = ExerciseBuilder()
+            .with(id: 12345)
+            .with(name: "Sleep")
+            .build()
         
         login()
         searcExercise(nonExistentExercise.id)
