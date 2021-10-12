@@ -35,7 +35,7 @@ class SearchTest: AppStarter, SearchScreen, LoginScreen, ExerciseScreen {
         selectExercise(exercise)
         
         XCTAssertTrue(backButton.waitUntilExists())
-        XCTAssertTrue(exerciseTitle.waitUntilExists())
+        XCTAssertTrue(exerciseName.waitUntilExists())
         XCTAssertTrue(exerciseImage.waitUntilExists())
     }
     

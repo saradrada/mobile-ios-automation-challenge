@@ -13,25 +13,15 @@ protocol ExerciseScreen { }
 
 extension ExerciseScreen {
     
-    func isExerciseScreenDisplayed(){
-        XCTAssertTrue(backButton.waitForExistence(timeout: 1))
-        XCTAssertTrue(exerciseTitle.waitForExistence(timeout: 1))
-        XCTAssertTrue(exerciseImage.waitForExistence(timeout: 1))
-    }
-    
-    func isExerciseTitleCorrect(title: String){
-        XCTAssertEqual(exerciseTitle.label, title)
-    }
-    
     var backButton : XCUIElement {
-        return XCUIApplication().buttons["Back"]
+        return XCUIApplication().buttons[Accessibility.Exercise.backButton]
     }
     
-    var exerciseTitle : XCUIElement {
-        return XCUIApplication().staticTexts["label_workout-title"]
+    var exerciseName : XCUIElement {
+        return XCUIApplication().staticTexts[Accessibility.Exercise.exerciseName]
     }
     
     var exerciseImage : XCUIElement {
-        return XCUIApplication().images["image_workout-equipment"]
+        return XCUIApplication().images[Accessibility.Exercise.exerciseImage]
     }
 }

@@ -11,18 +11,27 @@ import XCTest
 class ExerciseTest: AppStarter, ExerciseScreen, LoginScreen, SearchScreen {
     
     func test_correctExerciseDetails() {
+        let exercise = Excercise(id: 341, name: "Body-Ups")
+        
         login()
-        selectExercise(id: "341", name: "Body-Ups")
-        isExerciseScreenDisplayed()
-        isExerciseTitleCorrect(title: "Body-Ups")
+        selectExercise(exercise)
+        
+        XCTAssertTrue(backButton.waitUntilExists())
+        XCTAssertTrue(exerciseImage.waitUntilExists())
+        XCTAssertTrue(exerciseName.waitUntilExists())
+        XCTAssertEqual(exerciseName.label, exercise.name)
     }
     
     func test_goBack(){
+        let exercise = Excercise(id: 307, name: "Bear Walk")
+       
         login()
-        selectExercise(id: "307", name: "Bear Walk")
-        isExerciseScreenDisplayed()
-        isExerciseTitleCorrect(title: "Bear Walk")
+        selectExercise(exercise)
+        
+        XCTAssertTrue(backButton.waitUntilExists())
+        
         backButton.tap()
-        isSearchBarDisplayed()
+        
+        XCTAssertTrue(searchBar.waitUntilExists())
     }
 }
