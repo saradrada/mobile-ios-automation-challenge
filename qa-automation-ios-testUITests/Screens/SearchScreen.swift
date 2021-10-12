@@ -12,38 +12,7 @@ protocol SearchScreen { }
 
 extension SearchScreen {
     
-    func searcExercise(_ id: Int) {
-        searchBar.tap()
-        searchBar.typeText("\(id)")
-    }
-    
-    func selectExercise(_ exercise : Excercise){
-        let foundExercise = getExercise(meta: "\(exercise.id): \(exercise.name)")
-        foundExercise.tap()
-    }
-    
-    func cleartText(){
-        clearTextButton.tap()
-    }
-    
-    func getExercise(meta : String) -> XCUIElement {
-        return XCUIApplication().staticTexts[meta]
-    }
-    
     var searchBar : XCUIElement {
         return XCUIApplication().searchFields[Accessibility.Search.searchExercisesText]
     }
-    
-    var cancelButton : XCUIElement {
-        return XCUIApplication().buttons[Accessibility.Search.cancelButton]
-    }
-    
-    var clearTextButton : XCUIElement {
-        return XCUIApplication().buttons[Accessibility.Search.clearTextButton]
-    }
-    
-    var emptyList : XCUIElement {
-        return XCUIApplication().tables[Accessibility.Search.emptyList]
-    }
-    
 }
