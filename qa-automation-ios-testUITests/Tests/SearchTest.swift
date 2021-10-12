@@ -8,7 +8,7 @@
 
 import XCTest
 
-class SearchTest: AppStarter, SearchScreen, LoginScreen, ExerciseScreen {
+class SearchTest: AppStarter, SearchScreen, LoginScreen {
     
     func test_searchExistingExercise(){
         let searchExercisesText = "Search exercises"
