@@ -18,7 +18,7 @@ extension SearchScreen {
     }
     
     func selectExercise(_ exercise : Excercise){
-        let foundExercise = getExercise(meta: "\(exercise.id): \(exercise.name)")
+        let foundExercise = getExercise(exercise)
         foundExercise.tap()
     }
     
