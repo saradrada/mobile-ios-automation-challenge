@@ -40,4 +40,20 @@ class ExerciseTest: AppStarter, ExerciseScreen, LoginScreen, SearchScreen {
         
         XCTAssertTrue(searchBar.waitUntilExists())
     }
+    
+    func test_searchAndSelectExercise(){
+            let exercise = ExerciseBuilder()
+                .with(id: 289)
+                .with(name: "Axe Hold")
+                .build()
+            
+            login()
+            searcExercise(exercise.id)
+            selectExercise(exercise)
+            
+            XCTAssertTrue(backButton.waitUntilExists())
+            XCTAssertTrue(exerciseImage.waitUntilExists())
+            XCTAssertTrue(exerciseName.waitUntilExists())
+            XCTAssertEqual(exerciseName.label, exercise.name)
+        }
 }
