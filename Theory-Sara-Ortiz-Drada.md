@@ -226,6 +226,7 @@ To select which iPhone models to use in the testing stage of the pipeline, I did
 
 This is the pipeline that I used: 
 
+![Pipeline](https://github.com/saradrada/mobile-ios-automation-challenge/blob/doc/improvements-readme-theory/docs/images/github-actions.jpg)
 
 ## 6. Bug Report
 
@@ -234,7 +235,7 @@ While running the app I found a bug in one of the scenarios for the Exercise com
 
 | Title           | Search and select exercise                                                                                             |
 | ----------------| -----------------------------------------------------------------------------------------------------------------------|
-| Enviroment      | master branch, running on any iPhone model                                                                             |
+| Environment     | master branch, running on any iPhone model                                                                             |
 | Scenario        | Scenario: Display details of searched exercise                                                                         |
 |                 | Given the user logs into the app                                                                                       |
 |                 | And the user searches an existing exercise.                                                                            |
