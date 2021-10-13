@@ -17,6 +17,11 @@ extension SearchScreen {
         searchBar.typeText("\(id)")
     }
     
+    func selectExercise(_ exercise : Excercise){
+        let foundExercise = getExercise(exercise)
+        foundExercise.tap()
+    }
+    
     func cleartText(){
         clearTextButton.tap()
     }

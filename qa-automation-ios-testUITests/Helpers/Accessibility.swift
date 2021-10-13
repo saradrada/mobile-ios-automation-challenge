@@ -24,4 +24,10 @@ enum Accessibility {
         static let clearTextButton = "Clear text"
         static let emptyList = "Empty list"
     }
+    
+    enum Exercise {
+        static let backButton = "Back"
+        static let exerciseName = "label_workout-title"
+        static let exerciseImage = "image_workout-equipment"
+    }
 }
