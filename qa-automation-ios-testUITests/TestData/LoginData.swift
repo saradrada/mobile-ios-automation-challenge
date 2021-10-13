@@ -14,5 +14,4 @@ enum LoginData : String {
     case validPassword = "automation"
     case invalidUsername = "invalid@username.com"
     case invalidPassword = "invalidPassword"
-    
 }
